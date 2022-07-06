@@ -1,0 +1,313 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --almost-white:hsl(0, 0%, 98%);
+    --medium-gray:hsl(0, 0%, 41%);
+    --almost-black:hsl(0, 0%, 8%);
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    
+    color:var(--medium-gray);
+    font-family: 'Epilogue', sans-serif;
+    font-size:18px;
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/*Nav bar*/
+.nav{
+    width:95%;
+    display:flex;
+    align-items: center;
+    margin:2% 3% 6% 3%;
+}
+
+.mobile-nav{
+    display:none;
+}
+
+.logo{
+    position:absolute;
+    padding-top:10px;
+   
+}
+
+.close{
+    display:none;
+}
+
+
+.nav-content{
+    width:90%;
+    display:flex;
+    align-items: center;
+    margin-left:120px;
+    
+}
+.nav-btn{
+    margin-left:40px;
+    border:none;
+    background-color: white;
+    font-size:0.9rem;
+}
+
+.nav-btn:hover{
+    cursor: pointer;
+    color:var(--almost-black);
+}
+
+.first-right{
+    margin-left:auto;
+}
+
+.reg-btn{
+    border:2px solid var(--medium-gray);
+    border-radius: 10px;
+    padding:13px 19px;
+}
+
+.reg-btn:hover{
+    border:2px solid var(--almost-black);
+}
+
+
+a{
+    margin-left:10px;
+}
+
+.dropdown-content{
+    display:none;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:4px 4px 20px 5px gainsboro;
+    position: absolute;
+    list-style: none;
+    font-size:0.9rem;
+    margin-top:20px;
+    line-height: 2;
+    padding:20px;
+    text-align: left;
+    
+}
+
+.company{
+    margin-left:50px;
+}
+
+
+
+/*Main content*/
+.main-container{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    
+}
+
+button{
+    color:var(--medium-gray);
+    font-family: 'Epilogue', sans-serif;
+    font-size:18px;
+}
+
+.left-side{
+  width:50%;
+  padding:60px;
+  margin: 50px 90px;
+}
+
+h1{
+    color:var(--almost-black);
+    font-size:6.5rem;
+}
+
+p{
+    width:70%;
+    line-height:1.5em;
+    margin:7% 0%;
+}
+
+.main-btn{
+    color:var(--almost-white);
+    background-color: var(--almost-black);
+    border:none;
+    border-radius: 15px;
+    padding:20px 30px;
+    margin-bottom:70px;
+}
+
+.main-btn:hover{
+    cursor: pointer;
+    background-color: var(--almost-white);
+    border:1px solid var(--almost-black);
+    color:var(--almost-black);
+    font-weight:700;
+    padding:19px 29px;
+}
+
+.icons{
+    width:90%;
+    display:flex;
+    justify-content: space-between;
+    
+
+}
+
+.right-side{
+    width:50%;
+    margin-left:5%;
+}
+.main-img{
+    width:480px;
+    content: url("images\\image-hero-desktop.png" );
+    
+    
+}
+
+
+
+
+
+
+/*Attribution*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top:auto;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*Media*/
+
+
+
+@media (max-width:950px){
+
+    
+    body{
+        width:100%;
+        padding:2%;
+        
+    }
+
+    .mobile-nav{
+        cursor: pointer;
+        display:block;
+        margin-left:auto;
+        color:var(--almost-black);
+        font-size:24px;
+    }
+
+    
+    .nav-content{
+        display:none;
+        flex-direction: column;
+        align-items: flex-start;
+        height:100%;
+        width:65%;
+        background-color: var(--almost-white);
+        padding:20px;
+        position:fixed;
+        top:0;
+        right:0;
+        overflow-x: hidden;
+        z-index: 1;
+    }
+
+    .overlay{
+        display:none;
+        width:35%;
+        height: 100%;
+        position:fixed;
+        left:0;
+        top:0;
+        bottom:0;
+        z-index:1 ;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .close{
+        cursor: pointer;
+        display:block;
+        align-self: flex-end;
+    }
+
+    .dropdown-content{
+        display:none;
+        position: relative;
+        background-color: var(--almost-white);
+        box-shadow: none;
+        padding:0;
+        
+    }
+    .feature{
+        margin-left:50px;
+    }
+
+    .nav-btn{
+        margin:10px 0 10px 0;
+        font-size: 1em;
+        
+    }
+
+    .first-right{
+        align-self: center;
+    }
+
+    .reg-btn{
+        width:100%;
+    }
+    .main-container{
+        flex-direction: column-reverse;
+        
+    }
+
+    .right-side{
+        width:100%;
+        margin:0;
+    }
+
+    .main-img{
+        content:url("images\\image-hero-mobile.png");
+        width:100%;
+        
+    }
+
+    .left-side{
+        width:100%;
+        padding:0;
+        margin:30px 0 0 0;
+        text-align: center;
+    }
+
+    h1{
+        font-size:4em;
+    }
+
+    p{
+        width:100%;
+    }
+}
+
+@media (max-width:740px) {
+    h1{
+        font-size:3em;
+    }
+}
+
+@media (max-width:550px){
+    h1{
+        font-size:2em;
+    }
+}
